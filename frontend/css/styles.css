@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: none;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+input[type="submit"] {
+    width: 90%;
+    padding: 8px;
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.error {
+    border: 1px solid red;
+    animation: shake 0.5s;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-10px); }
+    40% { transform: translateX(10px); }
+    60% { transform: translateX(-10px); }
+    80% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
+}
+
+#display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.array-block {
+    background-color: #e8e8e8;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    color: #333333;
+}
+
+.array-block h2 {
+    background-color: #3366cc;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+.array-block p {
+    background-color: #dc8a7e;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+}
+
+.table-container {
+    margin-top: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.jxgbox {
+    width: 600px;
+    height: 350px;
+}
+
+.plot_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.error_label {
+    color: #f8001e;
+}
