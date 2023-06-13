@@ -31,26 +31,32 @@ public abstract class OneStepMethod {
             double currentX = inputParamsDto.getX0();
             double currentY = inputParamsDto.getY0();
 
-            while (currentX <= inputParamsDto.getXn()) {
+            while (inputParamsDto.getXn() - currentX >= - 0.0001) {
                 xValues.add(currentX);
                 yValues.add(currentY);
 
-                currentY = countWithH(equation, currentX, currentY, h);
+                double newY = countWithH(equation, currentX, currentY, h);
                 double halfHY = countWithH(equation, currentX, currentY, h / 2);
+
+                currentY = newY;
 
                 currentAccuracy = rungeApproximationCounter.calculateApproximation(currentY, halfHY, p);
 
                 currentX = currentX + h;
+
+                if (Double.isNaN(currentY) || !Double.isFinite(currentY)) {
+                    throw new RuntimeException("The function suffers a break, change interval");
+                }
             }
 
             h /= 2;
-            if (h < 0.0001) {
+            if (h < 0.000005) {
                 throw new RuntimeException("Too small h");
             }
 
             countOfIteration++;
-            if (countOfIteration > 10000) {
-                throw new RuntimeException("Can't solve by 2 seconds");
+            if (countOfIteration > 500_000) {
+                throw new RuntimeException("Can't solve by 500000 iterations");
             }
         }
 

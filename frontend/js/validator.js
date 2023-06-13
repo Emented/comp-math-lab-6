@@ -4,12 +4,11 @@ function validateForm(board) {
 
 
     let functionId = parseFloat(document.getElementById('function').value);
-    const y0 = parseFloat(document.getElementById("y0").value.replace(",", "."));
-    const x0 = parseFloat(document.getElementById("x0").value.replace(",", "."));
-    const xn = parseFloat(document.getElementById("xn").value.replace(",", "."));
-    const h = parseFloat(document.getElementById("h").value.replace(",", "."));
-    const e = parseFloat(document.getElementById("e").value.replace(",", "."));
-
+    const y0 = Number(document.getElementById("y0").value.replace(",", "."));
+    const x0 = Number(document.getElementById("x0").value.replace(",", "."));
+    const xn = Number(document.getElementById("xn").value.replace(",", "."));
+    const h = Number(document.getElementById("h").value.replace(",", "."));
+    const e = Number(document.getElementById("e").value.replace(",", "."));
 
     let isValid = true;
 

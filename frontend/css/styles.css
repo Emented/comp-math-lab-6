@@ -38,7 +38,7 @@ input[type="submit"] {
 
 input[type="submit"] {
     width: 100%;
-    background-color: #007bff;
+    background-color: #3cda2b;
     cursor: pointer;
     font-size: 24px;
     color: white;
@@ -46,7 +46,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #47ce38;
 }
 
 .error {
